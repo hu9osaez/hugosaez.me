@@ -1,0 +1,30 @@
+@import 'mixins';
+@import '~minireset.css/minireset';
+@import '~gridlex/src/gridlex';
+
+@include font-face(icons, '../fonts/icons', null, null, eot woff ttf)
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+[class^='icon-']:before, [class*=' icon-']:before,
+[class^='icon-']:after, [class*=' icon-']:after {
+  font-family: 'icons';
+  font-style: normal;
+}
+
+.icon-mail:before { content: '\f100'; }
+.icon-marker:before { content: '\f101'; }
+.icon-medium:before { content: '\f102'; }
+.icon-twitter:before { content: '\f103'; }
+.icon-github:before { content: '\f104'; }
